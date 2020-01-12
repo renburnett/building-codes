@@ -10,10 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_28_235146) do
+ActiveRecord::Schema.define(version: 2019_08_29_001759) do
 
   create_table "codes", force: :cascade do |t|
-    t.date "date_string"
+    t.string "date_string"
     t.string "code"
     t.string "floor"
     t.datetime "created_at", null: false

@@ -1,7 +1,14 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'csv'
+
+# clear db before re-seeding
+Code.destroy_all
+
+def import_csv(csv_text, floor)
+  csv = CSV.parse(csv_text, :headers => true)
+  csv.each_with_index do |row|
+    Code.create(date_string: row['Day'], code: row['Code'], floor: floor)
+  end
+end
+
+import_csv(File.read(Rails.root.join('first.csv')), 'first')
+import_csv(File.read(Rails.root.join('second.csv')), 'second')
