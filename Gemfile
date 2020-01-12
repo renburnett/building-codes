@@ -12,6 +12,11 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+gem 'rest-client'
+
+gem 'bootstrap'
+gem 'jquery-rails'
+
 #CSS framework based on Flexbox
 gem 'bulma-rails', '~> 0.8.0'
 
