@@ -1,0 +1,24 @@
+<section class="section">
+  <div class="container">
+    <h1 class="title">All Codes</h1>
+    <% @codes.each do |code| %>
+      <%if code.code %>
+        <div class="card">
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-3">
+                  Floor: <%= code.floor %>
+                </p>
+              </div>
+              <div class="content">
+                Date: <%= code.date_string %>
+                Code: <%= code.code %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</section>
