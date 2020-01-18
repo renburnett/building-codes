@@ -12,6 +12,9 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+gem 'jquery-rails'
+
+#client used to make REST calls
 gem 'rest-client'
 
 #styling with materialize

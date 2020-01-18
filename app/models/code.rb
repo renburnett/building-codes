@@ -1,5 +1,6 @@
 class Code < ApplicationRecord
   require 'csv'
+  require 'date'
   
   def self.import
     import_csv(File.read(Rails.root.join('first.csv')), 'first')
@@ -9,7 +10,9 @@ class Code < ApplicationRecord
   def self.import_csv(csv_text, floor)
     csv = CSV.parse(csv_text, :headers => true)
     csv.each do |row|
-      Code.create(date_string: row['Day'], code: row['Code'], floor: floor)
+      if row['Day']
+        Code.create(date_string: Date.parse(row['Day']), code: row['Code'], floor: floor)
+      end
     end
   end
 end
