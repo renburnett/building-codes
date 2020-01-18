@@ -1,0 +1,18 @@
+
+  <div class="row valign-wrapper v-helper">
+    <div class="valign col s12 m6 offset-m3">
+      <div class="card blue darken-1" >
+        <div class="card-content white-text">
+          <span class="card-title">Bathroom Code</span>
+          <ul>
+            <li>Floor: <%= @code.floor.upcase %> </li>
+            <li>Date: <%= @code.date_string %> </li>
+            <li><b>Code: <%= @code.code %> </b></li>
+          </ul>
+        </div>
+        <div class="card-action blue">
+          <a href="<%= codes_path %>">return to all codes</a>
+        </div>
+      </div>
+    </div>
+  </div>

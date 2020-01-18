@@ -1,5 +1,3 @@
-require 'csv'
-
 # clear db before re-seeding
 Code.destroy_all
 

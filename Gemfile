@@ -12,13 +12,13 @@ gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
-gem 'rest-client'
-
-gem 'bootstrap'
 gem 'jquery-rails'
 
-#CSS framework based on Flexbox
-gem 'bulma-rails', '~> 0.8.0'
+#client used to make REST calls
+gem 'rest-client'
+
+#styling with materialize
+gem 'materialize-sass'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
